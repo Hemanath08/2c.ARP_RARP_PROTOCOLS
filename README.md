@@ -2,13 +2,13 @@
 ## AIM:
 To write a python program for simulating ARP protocols using TCP.
 ## ALGORITHM:
-## Client:
+## CLIENT:
 1. Start the program
 2. Using socket connection is established between client and server.
 3. Get the IP address to be converted into MAC address.
 4. Send this IP address to server.
 5. Server returns the MAC address to client.
-## Server:
+## SERVER:
 1. Start the program
 2. Accept the socket which is created by the client.
 3. Server maintains the table in which IP and corresponding MAC addresses are
@@ -17,7 +17,7 @@ stored.
 5. Map the IP address with its MAC address and return the MAC address to client.
 
 ## PROGRAM - ARP:
-# CLIENT:
+## CLIENT:
 ```
 import socket
 s=socket.socket()
@@ -32,7 +32,7 @@ while True:
  except KeyError:
  c.send("Not Found".encode())
 ```
-# SERVER:
+## SERVER:
 ```
 import socket
 s=socket.socket()
@@ -44,15 +44,15 @@ REG NO:
  print("MAC Address",s.recv(1024).decode()
 ```
 ## OUPUT - ARP:
-# CLIENT:
+## CLIENT:
 
 ![image](https://github.com/Hemanath08/2c.ARP_RARP_PROTOCOLS/assets/151807176/bcae5d31-cc9f-4bee-9a2b-26a7a883bbcf)
-# SERVER:
+## SERVER:
 
 ![image](https://github.com/Hemanath08/2c.ARP_RARP_PROTOCOLS/assets/151807176/c44e3982-e91b-4dc9-a0f8-31141285af5f)
 
 ## ALGORITHM FOR RARP:
-# CLIENT:
+## CLIENT:
 1.Start the program
 
 2.Using datagram sockets UDP function is established.
@@ -63,7 +63,7 @@ REG NO:
 
 5.Server returns the IP address to client.
 
-# SERVER:
+## SERVER:
 1.Start the program.
 
 2.Server maintains the table in which IP and corresponding MAC addresses are stored.
@@ -74,7 +74,7 @@ REG NO:
 
 ## PROGRAM - RARP:
 
-# CLIENT:
+## CLIENT:
 ```
 import socket 
 s=socket.socket() 
@@ -89,7 +89,7 @@ while True:
             except KeyError: 
                 c.send("Not Found".encode())
 ```
-# SERVER:
+## SERVER:
 ```
 import socket 
 s=socket.socket() 
@@ -101,10 +101,10 @@ while True:
 ```
 
 ## OUPUT -RARP:
-# CLIENT:
+## CLIENT:
 ![image](https://github.com/Hemanath08/2c.ARP_RARP_PROTOCOLS/assets/151807176/b7dafb5e-5951-4a12-821b-daba670c7445)
 
-# SERVER:
+## SERVER:
 
 ![image](https://github.com/Hemanath08/2c.ARP_RARP_PROTOCOLS/assets/151807176/b2396d01-49ca-45ac-a978-250c2c18fe8e)
 
